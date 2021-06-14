@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/iter-dedupe",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Create an iterator which removes consecutive duplicated values.",
   "license": "Apache-2.0",
   "author": {
