@@ -264,8 +264,8 @@ while ( true ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/iter/dedupe-by`][@stdlib/iter/dedupe-by]</span><span class="delimiter">: </span><span class="description">create an iterator which removes consecutive values that resolve to the same value according to a provided function.</span>
--   <span class="package-name">[`@stdlib/iter/unique`][@stdlib/iter/unique]</span><span class="delimiter">: </span><span class="description">create an iterator which returns unique values.</span>
+-   <span class="package-name">[`@stdlib/iter-dedupe-by`][@stdlib/iter/dedupe-by]</span><span class="delimiter">: </span><span class="description">create an iterator which removes consecutive values that resolve to the same value according to a provided function.</span>
+-   <span class="package-name">[`@stdlib/iter-unique`][@stdlib/iter/unique]</span><span class="delimiter">: </span><span class="description">create an iterator which returns unique values.</span>
 
 </section>
 
