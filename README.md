@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@esm/index.mjs';
+import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@v0.1.0-esm/index.mjs';
 ```
 
 #### iterDedupe( iterator\[, limit] )
@@ -222,7 +222,7 @@ var bool = it.next().done;
 <script type="module">
 
 import randi from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-discrete-uniform@esm/index.mjs';
-import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@esm/index.mjs';
+import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@v0.1.0-esm/index.mjs';
 
 // Create a seeded iterator for generating pseudorandom integers on the interval [1,3]:
 var rand = randi( 1, 3, {
