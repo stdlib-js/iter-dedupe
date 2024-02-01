@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/iter-dedupe
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@deno/mod.js';
+var iterDedupe = require( '@stdlib/iter-dedupe' );
 ```
 
 #### iterDedupe( iterator\[, limit] )
@@ -60,7 +78,7 @@ import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@deno/m
 Returns an [iterator][mdn-iterator-protocol] which removes consecutive duplicated values.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var it = iterDedupe( array2iterator( [ 1, 1, 2, 3, 3, 3, 4, 4 ] ) );
 // returns <Object>
@@ -89,7 +107,7 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 The returned [iterator][mdn-iterator-protocol] removes **consecutive** duplicated values and does **not** return globally unique values.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var it = iterDedupe( array2iterator( [ 1, 1, 2, 1, 1, 2 ] ) );
 // returns <Object>
@@ -113,7 +131,7 @@ var bool = it.next().done;
 To specify the number of allowed consecutive duplicated values, provide a second argument.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 var it = iterDedupe( array2iterator( [ 1, 1, 2, 3, 3, 3, 3, 4, 4, 4 ] ), 2 );
 // returns <Object>
@@ -156,7 +174,7 @@ var bool = it.next().done;
 -   `NaN` values are considered **distinct**.
 
     ```javascript
-    import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+    var array2iterator = require( '@stdlib/array-to-iterator' );
 
     var it = iterDedupe( array2iterator( [ NaN, NaN, NaN, NaN ] ) );
     // returns <Object>
@@ -180,7 +198,7 @@ var bool = it.next().done;
 -   Uniqueness is determined according to strict equality. Accordingly, objects are **not** checked for deep equality.
 
     ```javascript
-    import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@deno/mod.js';
+    var array2iterator = require( '@stdlib/array-to-iterator' );
 
     var it = iterDedupe( array2iterator( [ {}, {}, {}, {} ] ) );
     // returns <Object>
@@ -216,8 +234,8 @@ var bool = it.next().done;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import randi from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-discrete-uniform@deno/mod.js';
-import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@deno/mod.js';
+var randi = require( '@stdlib/random-iter-discrete-uniform' );
+var iterDedupe = require( '@stdlib/iter-dedupe' );
 
 // Create a seeded iterator for generating pseudorandom integers on the interval [1,3]:
 var rand = randi( 1, 3, {
@@ -275,7 +293,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -329,8 +347,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 [deno-url]: https://github.com/stdlib-js/iter-dedupe/tree/deno
+[deno-readme]: https://github.com/stdlib-js/iter-dedupe/blob/deno/README.md
 [umd-url]: https://github.com/stdlib-js/iter-dedupe/tree/umd
+[umd-readme]: https://github.com/stdlib-js/iter-dedupe/blob/umd/README.md
 [esm-url]: https://github.com/stdlib-js/iter-dedupe/tree/esm
+[esm-readme]: https://github.com/stdlib-js/iter-dedupe/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/iter-dedupe/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/iter-dedupe/main/LICENSE
@@ -339,9 +360,9 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/iter/dedupe-by]: https://github.com/stdlib-js/iter-dedupe-by/tree/deno
+[@stdlib/iter/dedupe-by]: https://github.com/stdlib-js/iter-dedupe-by
 
-[@stdlib/iter/unique]: https://github.com/stdlib-js/iter-unique/tree/deno
+[@stdlib/iter/unique]: https://github.com/stdlib-js/iter-unique
 
 <!-- </related-links> -->
 
