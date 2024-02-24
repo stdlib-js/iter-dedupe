@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/iter-dedupe/tags). For example,
+
+```javascript
 import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@v0.2.1-deno/mod.js';
 ```
 
@@ -217,7 +222,7 @@ var bool = it.next().done;
 
 ```javascript
 import randi from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-discrete-uniform@deno/mod.js';
-import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@v0.2.1-deno/mod.js';
+import iterDedupe from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-dedupe@deno/mod.js';
 
 // Create a seeded iterator for generating pseudorandom integers on the interval [1,3]:
 var rand = randi( 1, 3, {
